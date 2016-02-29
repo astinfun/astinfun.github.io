@@ -188,8 +188,8 @@
     <article id="post-快速排序算法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/02/28/快速排序算法/" class="article-date">
-  	<time datetime="2016-02-28T10:29:16.750Z" itemprop="datePublished">2016-02-28</time>
+      <a href="/2016/02/29/快速排序算法/" class="article-date">
+  	<time datetime="2016-02-29T02:22:53.019Z" itemprop="datePublished">2016-02-29</time>
 </a>
     </div>
   
@@ -201,12 +201,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>快速排序算法总结 </p>
-<p>一、<strong>思想</strong><br>举例说明:</p>
+<p>一、<strong>思想</strong><br>举例说明:对数组[2,4,9,3,6,7,1,5]进行快速排序</p>
 <p>步骤1: 首先用2当作基准，使用i j两个指针分别从两边进行扫描，把比2小的元素和比2大的元素分开 </p>
-<p>2 2 4 9 3 6 7 1 5 首先比较2和5，5比2大，j左移  </p>
-<p>2 2 4 9 3 6 7 1 5 比较2和1，1小于2，所以把1放在2的位置</p>
-<p>2 1 4 9 3 6 7 1 5 比较2和4，4大于2，因此将4移动到后面</p>
-<p>2 1 4 9 3 6 7 4 5 比较2和7，2和6，2和3，2和9，全部大于2，满足条件，因此不变</p>
+<p><font color="red">2</font> 2 4 9 3 6 7 1 5 首先比较2和5，5比2大，j左移  </p>
+<p><font color="red">2</font> 2 4 9 3 6 7 1 5 比较2和1，1小于2，所以把1放在2的位置</p>
+<p><font color="red">2</font> 1 4 9 3 6 7 1 5 比较2和4，4大于2，因此将4移动到后面</p>
+<p><font color="red">2</font> 1 4 9 3 6 7 4 5 比较2和7，2和6，2和3，2和9，全部大于2，满足条件，因此不变</p>
 <p>经过第一轮的快速排序，元素变为下面的样子</p>
 <p>[1] 2 [4 9 3 6 7 5]</p>
 <p>步骤2： 分别递归排序2左边和右边的序列</p>
