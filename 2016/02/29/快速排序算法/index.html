@@ -22,7 +22,7 @@
 2 2 4 9 3 6 7 1 5 首先比较2和5，5比2大，j左移  
 2 2 4 9 3 6 7 1 5 比较2和1，1小于2，所以把1放在2的位置
 2 1 4 9 3 6 7 1 5 比较2和4，4大">
-<meta property="og:updated_time" content="2016-02-29T02:22:53.019Z">
+<meta property="og:updated_time" content="2016-02-29T02:28:26.541Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="astinfun">
 <meta name="twitter:description" content="快速排序算法总结 
@@ -203,7 +203,7 @@
   
     <div class="article-meta">
       <a href="/2016/02/29/快速排序算法/" class="article-date">
-  	<time datetime="2016-02-29T02:22:53.019Z" itemprop="datePublished">2016-02-29</time>
+  	<time datetime="2016-02-29T02:28:26.541Z" itemprop="datePublished">2016-02-29</time>
 </a>
     </div>
   
@@ -233,7 +233,7 @@
 <li>5.分别递归i左边和右边的字数组</li>
 </ul>
 <p>二、<strong>代码</strong>  </p>
-<pre><code><span class="comment"><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span>  <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] a,<span class="keyword">int</span> left,<span class="keyword">int</span> right)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>（left &gt;= right)</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">int</span> key = a[left], i = left, j = right;</span><br><span class="line">       <span class="keyword">while</span> (i &lt; j)&#123;</span><br><span class="line">           <span class="keyword">while</span> (i &lt; j &amp;&amp; a[j] &gt; key)</span><br><span class="line">          		j--;</span><br><span class="line">           a[i] = a[j];</span><br><span class="line">           <span class="keyword">while</span> (i &lt; j &amp;&amp; a[i] &lt; key)</span><br><span class="line">            i++;</span><br><span class="line">           a[j] = a[i];</span><br><span class="line">       &#125;</span><br><span class="line">       a[i] = key;</span><br><span class="line">       sort(a, left, i - <span class="number">1</span>);</span><br><span class="line">       sort(a, i + <span class="number">1</span>, right);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></span>
+<pre><code><span class="comment"><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span>  <span class="keyword">void</span> <span class="title">sort</span><span class="params">(<span class="keyword">int</span>[] a,<span class="keyword">int</span> left,<span class="keyword">int</span> right)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>（left &gt;= right)</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	<span class="keyword">int</span> key = a[left], i = left, j = right;</span><br><span class="line">       <span class="keyword">while</span> (i &lt; j)&#123;</span><br><span class="line">           <span class="keyword">while</span> (i &lt; j &amp;&amp; a[j] &gt;= key)</span><br><span class="line">          		j--;</span><br><span class="line">           a[i] = a[j];</span><br><span class="line">           <span class="keyword">while</span> (i &lt; j &amp;&amp; a[i] &lt;= key)</span><br><span class="line">            i++;</span><br><span class="line">           a[j] = a[i];</span><br><span class="line">       &#125;</span><br><span class="line">       a[i] = key;</span><br><span class="line">       sort(a, left, i - <span class="number">1</span>);</span><br><span class="line">       sort(a, i + <span class="number">1</span>, right);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></span>
 </code></pre><p>三、<strong>性能</strong><br> 1.快速排序是不稳定的算法<br> 2.快速排序交换次数较多<br> 3.快速排序的最坏时间为O(n2)，但就平均性能而言，它是基于关键字比较的内部排序算法中速度最快者，它的平均时间复杂度为O(nlgn)。</p>
 
       
