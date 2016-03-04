@@ -210,7 +210,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>java线程池<br>一、线程池结构图<br><img src="~/images/201603/threadpool1.png" alt=""></p>
+        <p>java线程池<br>一、线程池结构图<br><img src="../../../../images/201603/threadpool1.png" alt=""></p>
 <p>二、示例  </p>
 <p>定义线程接口  </p>
 <pre><code><span class="comment"><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyThread</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function">publicvoid <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName() + <span class="string">"正在执行"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></span>
@@ -229,7 +229,7 @@
 <p>================<br>+++++++++++++++++<br>+++++++++++++++++<br>+++++++++++++++++  </p>
 <p>三、线程池核心参数<br>    corePoolSize ： 池中核心的线程数<br>    maximumPoolSize ： 池中允许的最大线程数。<br>    keepAliveTime ： 当线程数大于核心时，此为终止前多余的空闲线程等待新任务的最长时间。<br>    unit ： keepAliveTime 参数的时间单位。<br>    workQueue ： 执行前用于保持任务的队列。此队列仅保持由 execute方法提交的 Runnable任务。<br>    threadFactory ： 执行程序创建新线程时使用的工厂。<br>    handler ： 由于超出线程范围和队列容量而使执行被阻塞时所使用的处理程序。<br>    ThreadPoolExecutor是Executors类的底层实现。  </p>
 <p>3.1 任务排队机制<br>    SynchonousQueue: 同步队列<br>    LinkedBlockingQueue: 无界对列<br>    ArrayBlockingQueue : 有界队列  </p>
-<p>3.2 线程执行流程<br>  <img src="~/images/201603/threadpool2.jpg" alt=""></p>
+<p>3.2 线程执行流程<br>  <img src="../../../../images/201603/threadpool2.jpg" alt=""></p>
 <p>3.3 线程大小确定：<br>   cpu密集型： 尽量少开线程，最佳线程数 Ncpu+1<br>   io密集型：多开线程，2Ncpu<br>   混合型：根据情况而定，可以拆分成io密集和cou密集  </p>
 
       
